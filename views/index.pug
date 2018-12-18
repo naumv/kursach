@@ -1,0 +1,403 @@
+extends layout
+
+block content
+		header#header.header
+			.container
+				nav.navigation
+					a.logo(href='kama.html')
+						img(src='images/kamalogo.svg', alt='KAMA')
+					ul.menu
+						li.menu_item
+							a(href="/#academy")
+								span Академия
+						li.menu_item
+							a(href="/#course")
+								span Курсы
+						li.menu_item
+							a(href="/#lectors")
+								span Лекторы
+						li.menu_itemlast
+							a(href="#contacts")
+								span Контакты
+				.head_title
+					p.text_wrapp
+						| Kyiv Academy of Media Arts
+				.header_button
+					a.btn.button_student(href='/#form') Стать студентом
+				.social_media
+					a.insta(href='https://www.instagram.com/kama_ua/', target='_blank')
+						img(src='images/insta.svg', alt='KAMA')
+					a.fb(href='https://www.facebook.com/KyivAcademyofMediaArts/', target='_blank')
+						img(src='images/fb.svg', alt='')
+		//- // Header Section End
+		//- // 2 Section Start
+		#academy.section.firstsection
+			button#myBtn(onclick='topFunction()', title='Go to top')
+			.article_div
+				h2.title Академия
+				article.our_article.wrapp
+					.first_info
+						b KYIV ACADEMY OF MEDIA ARTS
+						|  (KAMA) – это ведущий в Украине образовательный проект, посвященный обучению креативным специальностям.
+						br
+						br
+						| Мы верим: 
+						b лучшая учеба — это практика
+						| .
+						| Поэтому формат обучения в KAMA не ограничивается лекциями и теорией. Это пространство постоянного взаимодействия идей и их воплощения. Если ты хочешь стать частью креативной индустрии — добро пожаловать к нам.
+					.right_info
+						| "MEDIA IS JUST ANY SPACE BETWEEN A BRAND AND THE AUDIENCE. AND IN FACT, WE BELIEVE THE BEST BRANDS WILL BECOME MEDIA THEMSELVES:
+						| THE PLACES, SPACES, EXPERIENCES PEOPLE CHOOSE TO SPEND TIME WITH".
+						br
+						br
+						b Цель Академии
+						|  – развитие индустрии креативности и формирование качественно нового порядка и системы образования.
+		//- //- // 2 Section End
+		//- //- // 3 Section Start
+		#course.section.thirdsection
+			.courses.wrapp
+				h2.title Курсы
+				//- // Design
+				h3.courses_area Design
+				.courses_design.wrapp
+					each item in results[0]
+						.courses_block
+							.course_info
+								.block_top
+									h4.courses_direction #{item.direction}
+									p.course_frequency Набор проходит #{item.frequency} раза в год
+									p.course_period
+										| Период обучения зимнего набора:
+										br
+										b #{item.period}
+								p.course_price #{item.price} 000 грн | #{item.weeks} недель | #{item.days}
+							.header-button
+								a.button_more(href='#form') Зарегистрироваться
+					//- .courses_block
+					//- 	.course_info
+					//- 		.block_top
+					//- 			h4.courses_direction Graphic design basic
+					//- 			p.course_frequency Набор проходит четыре раза в год
+					//- 			p.course_period
+					//- 				| Период обучения зимнего набора:
+					//- 				br
+					//- 				b январь — март 2019
+					//- 		p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+					//- 	.header-button
+					//- 		a.button_more(href='#form') Зарегистрироваться
+					//- .courses_block
+					//- 	.course_info
+					//- 		.block_top
+					//- 			h4.courses_direction Graphic design basic
+					//- 			p.course_frequency Набор проходит четыре раза в год
+					//- 			p.course_period
+					//- 				| Период обучения зимнего набора:
+					//- 				br
+					//- 				b январь — март 2019
+					//- 		p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+					//- 	.header-button
+					//- 		a.button_more(href='#form') Зарегистрироваться
+					//- .courses_block
+					//- 	.course_info
+					//- 		.block_top
+					//- 			h4.courses_direction Web design
+					//- 			p.course_frequency Набор проходит четыре раза в год
+					//- 			p.course_period
+					//- 				| Период обучения зимнего набора:
+					//- 				br
+					//- 				b январь — март 2019
+					//- 		p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+					//- 	.header-button
+					//- 		a.button_more(href='#form') Зарегистрироваться
+					each item in results[1]
+						.courses_block_wide
+							.course_info
+								.block_top
+									h4.courses_direction #{item.direction}
+									p.course_frequency Набор проходит #{item.frequency} раза в год
+									p.course_period
+										| Период обучения зимнего набора:
+										br
+										b #{item.period}
+								p.course_price #{item.price} 000 грн | #{item.weeks} недель | #{item.days}
+							.header-button
+								a.button_more(href='#form') Зарегистрироваться
+		//- //- // ADVERTISING & MARKETING
+		section.thirdsection
+			.courses.wrapp
+				//- // Design
+				h3.courses_area Advertising & Marketing
+				.courses_design.wrapp
+					.courses_block_wide
+						.course_info
+							.block_top
+								h4.courses_direction(style='display: inline;') #{results[2][0].direction}, #{results[2][1].direction}, #{results[2][2].direction} 
+								p.course_frequency Набор проходит #{results[2][1].frequency} раза в год
+								p.course_period
+									| Период обучения зимнего набора:
+									br
+									b январь — март 2019
+							p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+						.header-button
+							a.button_more(href="/#form") Зарегистрироваться
+					each item in results[3]
+						.courses_block
+							.course_info
+								.block_top
+									h4.courses_direction #{item.direction}
+									p.course_frequency Набор проходит #{item.frequency} раза в год
+									p.course_period
+										| Период обучения зимнего набора:
+										br
+										b #{item.period}
+								p.course_price #{item.price} 000 грн | #{item.weeks} недель | #{item.days}
+							.header-button
+								a.button_more(href='#form') Зарегистрироваться
+					//- .courses_block
+					//- 	.course_info
+					//- 		.block_top
+					//- 			h4.courses_direction Graphic design basic
+					//- 			p.course_frequency Набор проходит четыре раза в год
+					//- 			p.course_period
+					//- 				| Период обучения зимнего набора:
+					//- 				br
+					//- 				b январь — март 2019
+					//- 		p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+					//- 	.header-button
+					//- 		a.button_more(href='#form') Зарегистрироваться
+					//- .courses_block
+					//- 	.course_info
+					//- 		.block_top
+					//- 			h4.courses_direction Graphic design basic
+					//- 			p.course_frequency Набор проходит четыре раза в год
+					//- 			p.course_period
+					//- 				| Период обучения зимнего набора:
+					//- 				br
+					//- 				b январь — март 2019
+					//- 		p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+					//- 	.header-button
+					//- 		a.button_more(href='#form') Зарегистрироваться
+		section.thirdsection
+			.courses.wrapp
+				// Design
+				h3.courses_area Contemporary Art
+				.courses_design_last.wrapp
+					each item in results[4]
+						.courses_block_last
+							.course_info
+								.block_top
+									h4.courses_direction #{item.direction}
+									p.course_frequency Набор проходит #{item.frequency} раза в год
+									p.course_period
+										| Период обучения зимнего набора:
+										br
+										b #{item.period}
+								p.course_price #{item.price} 000 грн | #{item.weeks} недель | #{item.days}
+							.header-button
+								a.button_more(href='#form') Зарегистрироваться
+					//- .courses_block_last
+					//- 	.course_info
+					//- 		.block_top
+					//- 			h4.courses_direction Graphic design basic
+					//- 			p.course_frequency Набор проходит четыре раза в год
+					//- 			p.course_period
+					//- 				| Период обучения зимнего набора:
+					//- 				br
+					//- 				b январь — март 2019
+					//- 		p.course_price 12 000 грн | 8 недель | Вт, Чт, Сб
+					//- 	.header-button
+					//- 		a.button_more(href='#form') Зарегистрироваться
+		//a(id='lectors')
+		#lectors.section.firstsection
+			.tutors
+				.tutors_title.wrapp
+					h2.title_tutors Лекторы
+				.slider.wrapp
+					input.slider__nav(type='radio', name='slider', title='slide1', checked='checked')
+					input.slider__nav(type='radio', name='slider', title='slide2')
+					input.slider__nav(type='radio', name='slider', title='slide3')
+					input.slider__nav(type='radio', name='slider', title='slide4')
+					.slider__inner
+						each item in tutors
+							.slider__contents
+								.photo
+									img.photo(src=item.photo, alt='rgd')
+								h3.slider__caption #{item.Trainer}
+								p.slider__txt #{item.directions}
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+						//- .slider__contents
+						//- 	.photo
+						//- 	h3.slider__caption Павел Вржещ
+						//- 	p.slider__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit. !
+		a(id='contacts')
+		section.thirdsection
+			.courses.wrapp
+				h2.title Контакты
+				//- // Design
+				.contacts_design.wrapp
+					.contacts
+						iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.2740870761036!2d30.48604531547764!3d50.45462057947597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce62fb35f99d%3A0x11e7e1b43bea616!2sKyiv+Academy+of+Media+Arts!5e0!3m2!1sru!2sua!4v1544394456983', width='600', height='450', frameborder='0', style='border:0', allowfullscreen='')
+					.contacts
+						p
+							| Украина, г. Киев
+							| ул. Дмитриевская, 80 
+							br
+							| (1 и 2 этажи)
+							br
+							br
+							b
+								| По вопросам обучения:
+								br
+							| 044 482 09 97 или 050 905 78 02
+							br
+							br
+							b
+								| По вопросам партнерства и любых видов сотрудничества:
+								br
+							| mailto@k-a-m-a.com
+							br
+							br
+							b
+								| Рабочие дни Академии:
+								br
+							| с понедельника по пятницу с 12:00 до 22:00, в субботу с 11:00 до 17:00.
+							br
+							br
+							br
+							a(href='https://www.facebook.com/KyivAcademyofMediaArts/', target='_blank') facebook
+							| , 
+							a(href='https://www.instagram.com/kama_ua/', target='_blank') instagram
+						p
+		a(id='form')
+		section.firstsection
+			.article_div
+				h2.title Регистрация
+				article.our_article.wrapp
+					.reg_info
+						| ДЛЯ ТОГО, ЧТОБЫ ПОСТУПИТЬ В АКАДЕМИЮ, НЕОБХОДИМО:
+						br
+						br
+						ol.list
+							li  Выбрать интересующий вас курс.
+							li
+								| Заполнить анкету с личной информацией и отправить ее нам, нажав на кнопку "Стать студентом".
+							li
+								| После этого в течение короткого времени мы с вами свяжемся по указанному номеру или имейлу. В зависимости от выбранного курса и вашего уровня подготовки, мы пригласим вас на встречу-знакомство или пришлем творческое задание для поступления.
+							li
+								| После успешного собеседования/выполнения задания мы приглашаем вас подписать договор на обучение и внести по нему оплату.
+						p
+							| По всем вопросам, касающимся поступления, вы всегда можете связаться с нами по телефону 0444820997, 0509057802.
+					.form_info
+						.form-style-8
+							form(action='/registeruser', method='post')
+								//- input#courses(type='text', required='', name="studentdirection", list='direction', placeholder='Выберите курс')
+								//- datalist#direction
+								select(name='studentdirection', required='')
+									option(value='', disabled='', selected='', hidden='') Выберите курс
+									option(value='Graphic Design Basic') Graphic Design Basic
+									option(value='Graphic Design Advanced') Graphic Design Advanced
+									option(value='Web Design') Web Design
+									option(value='UX Design') UX Design
+									option(value='Art Direction') Art Direction
+									option(value='Copywriting') Copywriting
+									option(value='Strategy') Strategy
+									option(value='Digital Marketing') Digital Marketing
+									option(value='Brand Managment') Brand Managment
+									option(value='Account Management') Account Management
+									option(value='Artist') Artist
+									option(value='Art Management') Art Management
+								input(type='text', required='', name='studentname', placeholder='Имя')
+								input(type='text', required='', name='studentsurname', placeholder='Фамилия')
+								input(type='email', required='', name='studentemail', placeholder='E-mail')
+								input(type='tel', required='', name='studenttel', pattern='^\+\d{2}\(\d{3}\)\s\d{3}[-]\d{2}[-]\d{2}$', maxlength='18', placeholder='Телефон')
+								button.btn_reg.button_reg(type='submit') Стать студентом
+								script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js')
+								script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js')
+								script(src='javascripts/kama.js')
+
+
+
+								

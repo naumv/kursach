@@ -1,0 +1,119 @@
+.form-style-8{
+  
+    background: #FFFFFF;
+  margin: 0 auto;
+  
+
+}
+
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="tel"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 select 
+{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px;
+  height: 45px;
+  -webkit-appearance: none; 
+  
+}
+
+
+.button_reg{
+font-size: 20px;
+font-style: normal;
+font-weight: bold;
+text-align: center;
+color: #000;
+border: 2px solid #fff;
+border-radius: 100px;
+width: 200px;
+padding:10px 0;
+display: block;
+margin-top: 59px ! important;
+
+}
+
+.btn_reg:hover{
+    background: #fff url('../images/btn.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    box-shadow: 0px 0px 20px rgba(255, 0, 168, 0.25);
+    outline: none;
+}
+
+.btn_reg{
+
+  margin: auto;   
+  color:#000;
+  cursor: pointer;
+}
+.button_reg button{
+margin-top: 50px;
+}
+
+
+.list {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+
+.list li::before {
+  background: url('../images/point.png') no-repeat center center;
+   background-size: cover;
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+text-shadow: 0px 0px 20px rgba(8, 255, 255, 0.25);
+  background-color: rgb(0,200,200);
+  color: white;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 30px;
+}
+
+.reg_info{
+  display: block;
+  font-style: normal;
+line-height: normal;
+font-size: 18px;
+  max-width: 555px;
+    margin-left: 0px;
+        line-height: 1.64285714;
+    }
+
+.form_info{
+  display: block;
+  font-style: normal;
+  line-height: normal;
+  font-size: 18px;
+  margin-left: auto;
+    
+    padding-left: 90px;
+    margin-left: 0px;
+        line-height: 1.64285714;
+  
+}

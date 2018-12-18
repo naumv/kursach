@@ -392,12 +392,9 @@ block content
 								input(type='text', required='', name='studentname', placeholder='Имя')
 								input(type='text', required='', name='studentsurname', placeholder='Фамилия')
 								input(type='email', required='', name='studentemail', placeholder='E-mail')
-								input(type='tel', required='', name='studenttel', pattern='^\+\d{2}\(\d{3}\)\s\d{3}[-]\d{2}[-]\d{2}$', maxlength='18', placeholder='Телефон')
+								input(type='text', required='', placeholder='Телефон: 0ХХХХХХХХХ', pattern='[0-9]{6,}', maxlength=10, name='studenttel' )
 								button.btn_reg.button_reg(type='submit') Стать студентом
 								script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js')
 								script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js')
 								script(src='javascripts/kama.js')
-
-
-
 								
